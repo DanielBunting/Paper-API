@@ -3,7 +3,7 @@ name: Build and Push to ACR
 on:
   push:
     branches:
-      - * # Adjust this as needed
+      - '**' # Adjust this as needed
 
 jobs:
   docker_build_and_push:
@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io/myapp:${{ github.sha }}
+          tags: ${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io/all-builds/paper:${{ github.sha }}
 
       # Optional: Deploy to Azure Web App for Containers or any other Azure service here
       # - name: Deploy to Azure
