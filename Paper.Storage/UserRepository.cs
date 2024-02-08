@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Paper.Storage
 {
-    internal class UserRepository
+    internal class UserRepository : IUserRepository
     {
     }
 }
