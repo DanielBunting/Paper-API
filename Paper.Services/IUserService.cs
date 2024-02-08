@@ -1,6 +1,9 @@
-﻿namespace Paper.Services
+﻿using Paper.Models.ViewModels;
+
+namespace Paper.Services
 {
-    internal interface IUserService
+    public interface IUserService
     {
+        public Task<bool> RegisterNewAppleUser(string appleSubId, NewUser newUser);
     }
 }

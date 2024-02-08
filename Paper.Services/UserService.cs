@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Paper.Models.ViewModels;
 
 namespace Paper.Services
 {
-    internal class UserService : IUserService
-
+    public class UserService : IUserService
     {
+        public Task<bool> RegisterNewAppleUser(string appleSubId, NewUser newUser)
+        {
+            // This would save the user in the database.
+            throw new NotImplementedException();
+        }
     }
 }
