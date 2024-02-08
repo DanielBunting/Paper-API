@@ -40,5 +40,21 @@ namespace Paper
         {
             throw new NotImplementedException();
         }
+
+        public static (string EmailAddress, string AppleSubId) GetAppleClaims(string token)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            var sub = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == "sub")?.Value;
+            var email = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == "email")?.Value;
+
+            foreach (var claim in jwtSecurityToken.Claims)
+            {
+                Console.WriteLine($"{claim.Type}: {claim.Value}");
+            }
+
+            return (email, sub);
+        }
+
     }
 }
