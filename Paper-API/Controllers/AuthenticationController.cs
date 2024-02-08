@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Paper.Models.ViewModels;
 
 namespace Paper.Controllers
 {
@@ -7,7 +8,7 @@ namespace Paper.Controllers
     public class AuthenticationController : ControllerBase
     {
         [HttpPost("Apple")]
-        public IActionResult AppleLogin()
+        public IActionResult AppleLogin(string token)
         {
             // IF not validated return return Unauthrized. 
             // IF not created return 404. 
@@ -18,7 +19,7 @@ namespace Paper.Controllers
         }
 
         [HttpPost("Apple/Register")]
-        public IActionResult AppleRegister()
+        public IActionResult AppleRegister(string token, [FromBody]NewUser newUser)
         {
             // Should return 201 created at when implemented. Throw general stuff otherwise. Also, use the same protection/guard as login here. 
             return Ok("Apple Register");
