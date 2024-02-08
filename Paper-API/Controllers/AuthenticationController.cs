@@ -6,17 +6,42 @@ namespace Paper.Controllers
     [Route("[controller]")]
     public class AuthenticationController : ControllerBase
     {
-        // Post to login. 
-        // Will login if login avalible else return a registration page.
+        [HttpPost("Apple")]
+        public IActionResult AppleLogin()
+        {
+            // IF not validated return return Unauthrized. 
+            // IF not created return 404. 
+            // IF all good, return OK, with the User Profile.
 
 
-        // Post to register. 
-        // Once registered, return the JWT.     
+            return Ok("Apple Login");
+        }
 
-        // Post to sign in with apple.
-        // IF not regitered, will be the register page.  
+        [HttpPost("Apple/Register")]
+        public IActionResult AppleRegister()
+        {
+            // Should return 201 created at when implemented. Throw general stuff otherwise. Also, use the same protection/guard as login here. 
+            return Ok("Apple Register");
+        }
 
-        // Post to register with Apple. 
-        // IF registered will tll you to get fucked. 
+        [HttpPost("Google")]
+        public IActionResult GoogleLogin()
+        {
+            // IF not validated return return Unauthrized. 
+            // IF not created return 404. 
+            // IF all good, return OK, with the User Profile.
+
+
+            return Ok("Google Login");
+        }
+
+        [HttpPost("Google/Register")]
+        public IActionResult GoogleRegister()
+        {
+            // Should return 201 created at when implemented. Throw general stuff otherwise. Also, use the same protection/guard as login here. 
+            return Ok("Google Register");
+        }
+
+
     }
 }
