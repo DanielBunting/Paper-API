@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Paper.Models.ViewModels;
 
 namespace Paper.Controllers
@@ -43,6 +44,13 @@ namespace Paper.Controllers
             return Ok("Google Register");
         }
 
+        [HttpPost("Logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            // TODO: Forget the token on device. 
 
+            return Ok();
+        }
     }
 }
