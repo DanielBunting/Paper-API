@@ -32,15 +32,10 @@ jobs:
     needs: docker_build_and_push
     runs-on: ubuntu-latest
     steps:
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'dev-paper'
-          slot-name: 'production'
+          slot-name: 'production' # Optional, remove if not using slots
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           images: '${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io/all-builds/paper:${{ github.sha }}'
