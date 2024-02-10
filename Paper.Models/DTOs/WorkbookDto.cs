@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Paper.Models
 {
-    public class Workbook
+    public class WorkbookDto
     {
         public string Title { get; set; }
 
-        public List<Page> Pages { get; set; }
+        public List<PageDto> Pages { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Paper.Models
 {
-    public class User
+    public class UserDto
     {
         public string UserId { get; set; }
 
@@ -8,9 +8,11 @@
 
         public string Email { get; set; }
 
-        public Settings Settings { get; set; }
+        public string Country { get; set; }
 
-        public List<Workbook> Workbooks { get; set; }
+        public SettingsDto Settings { get; set; }
+
+        public List<WorkbookDto> Workbooks { get; set; }
 
     }
 }

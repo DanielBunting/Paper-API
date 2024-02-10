@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Paper.Models.ViewModels;
+using Paper.EndpointModels;
 
 namespace Paper.Controllers
 {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Paper.Models
+namespace Paper.Services
 {
-    public class Settings
+    internal class WorkbookService
     {
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Paper.Models.ViewModels
+﻿namespace Paper.Models.EndpointModels
 {
     public class NewUser
     {

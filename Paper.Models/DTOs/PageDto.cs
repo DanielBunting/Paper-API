@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Paper.Models
 {
-    public class Page
+    public class PageDto
     {
         public bool IsDynamic { get; set; }
 
