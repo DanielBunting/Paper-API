@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Paper.Services.Interfaces;
 
-namespace Paper.Services
+namespace Paper.Services.Services
 {
-    internal class WorkbookService
+    internal class WorkbookService : IWorkbookService
     {
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Paper.Models
+﻿namespace Paper.Models.DTOs
 {
     public class UserDto
     {

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Paper.Models.Enums
 {
-    internal class AccountType
+    public enum AccountType
     {
+        Apple, Google
     }
 }

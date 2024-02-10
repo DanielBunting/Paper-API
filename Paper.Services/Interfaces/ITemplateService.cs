@@ -1,4 +1,4 @@
-﻿namespace Paper.Services
+﻿namespace Paper.Services.Interfaces
 {
     internal interface ITemplateService
     {

@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Paper.Storage.Interfaces;
 
-namespace Paper.Storage
+namespace Paper.Storage.Repositories
 {
-    internal class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
+        public Task<bool> RegisterNewUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

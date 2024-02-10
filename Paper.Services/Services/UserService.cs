@@ -1,6 +1,7 @@
 ﻿using Paper.Models.EndpointModels;
+using Paper.Services.Interfaces;
 
-namespace Paper.Services
+namespace Paper.Services.Services
 {
     public class UserService : IUserService
     {

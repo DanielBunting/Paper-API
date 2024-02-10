@@ -1,6 +1,6 @@
 ﻿using Paper.Models.EndpointModels;
 
-namespace Paper.Services
+namespace Paper.Services.Interfaces
 {
     public interface IUserService
     {
